@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+.Home{
+  
+  background-image: url('https://www.foodbusinessnews.net/ext/resources/2022/10/03/fresh-foods_AdobeStock_LEAD.jpeg?height=667&t=1664822646&width=1080');
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
