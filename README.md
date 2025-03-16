@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# Examen 1 Programacion de Tecnologias WEB
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `Componentes`
 
-## Available Scripts
+## Login.js
+- Se utilizo Container (que ocupara toda la pantall) , una Row que tuviera dos columnas una parte la del formulario y la otra con la de la parte de diseño. Dentro de la segunda columna se usa un div con una flexbox para poder centrar mas facilmente el formulario.
+- Contiene el formulario de inicio de sesión con campos para email y contraseña.
+- Incluye validación con restricciones de longitud en el campo de contraseña.
+- Se maneja el evento onClick en el botón de login para redirigir a la página principal.
+## Home.js
+- Se tomo parte de la columna del formulario del Login y se cambiaron los colores y se agregaron los botones para ir al detail.
+- Tambien se usa la carpeta public , para agregarlos iconos tomados de internet.
+- Presenta las opciones de navegación (Menú, Tiendas, Carrito).
+- Se usa el estado onClick para redirigir a la pantalla de detalles al hacer clic en las opciones.
+- Se utilizan imágenes representativas para cada opción.
+- Se utiliza navigate para poder pasar al detail y tambien para mandar el estado , con el texto y imagen que se selecciono 
+## Detail.js
+- Se iba a utilizar el navigate del home , para enviar el state y atraparlo con location en detail , despues de esto dentro de Carrousel ,  hacer un .map para mostrar agregar la lista de fotos del API
+- Usa el hook useEffect para obtener los datos al renderizar el componente.
+- Se almacena la respuesta en el hook useState, actualizando la interfaz automáticamente.
+- Se define la estructura de un carrusel para mostrar la información obtenida.
+- Las fotos de carrousel se crearon como un array , para poder iterarlas y ir agregar todas sin poner una por una.
+- Los objetos que tocaba tomar de Mockaroo , se crearon como objetos anidados , que tenian dentro el texto y la foto , aunque se puede hacer de la misma froma que el de las fotos del carrousel
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### `Decisiones`
+- Se inicio desarrollando el login , luego el home y despues el detail.
+- En la parte del login no se tomo bastante tiempo , lo deje lo mas parecido posible en cuanto diseño.
+- En la parte de home fue la que mas me tomo tiempo principalmente porque perdi el tiempo buscando iconos , que se parecieran (mala decision)
+- En la ultima y mas importante parte , la deja al final y no alcanze a implementarla completamente.
