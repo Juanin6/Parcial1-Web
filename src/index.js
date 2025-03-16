@@ -4,11 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
+import { LanguageProvider } from "./i18n";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <LanguageProvider>
     <App />
-  </React.StrictMode>
+  </LanguageProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

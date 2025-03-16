@@ -1,6 +1,9 @@
 import { Col, Container, Row, Form, Button, FormText } from "react-bootstrap";
-import { Link, Navigate, useNavigate } from "react-router-dom";
-function Login() {
+import { useNavigate } from "react-router-dom";
+import { FormattedMessage } from "react-intl"; // Importar react-intl
+import { useIntl } from "react-intl";
+function Login({ switchLanguage }) {
+  const intl = useIntl();
   const navigate = useNavigate();
   const submit = () => {
     navigate("/home");
@@ -9,8 +12,12 @@ function Login() {
     <Container>
       <Row style={{ minHeight: "100vh" }}>
         <Col style={{ backgroundColor: "#fff4f4" }}>
-          <h4 style={{ marginTop: "20px" }}> TOO GOOD TO GO</h4>
-          <p>Food wasting solution</p>
+          <h4 style={{ marginTop: "20px" }}>
+            <FormattedMessage id="titleLogin" />
+          </h4>
+          <p>
+            <FormattedMessage id="subTitleLogin" />
+          </p>
           <img
             src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
@@ -20,6 +27,10 @@ function Login() {
               borderTopLeftRadius: "20px",
             }}
           />
+          <div>
+            <button onClick={() => switchLanguage("es")}>ES</button>
+            <button onClick={() => switchLanguage("en")}>EN</button>
+          </div>
         </Col>
         <Col style={{ backgroundColor: "#283c3c" }}>
           <div
@@ -39,7 +50,7 @@ function Login() {
                   <Form.Control
                     style={{ backgroundColor: "transparent" }}
                     type="email"
-                    placeholder="Enter email"
+                    placeholder={intl.formatMessage({ id: "enterEmail" })}
                   />
                 </Form.Group>
                 <Form.Group className="mb-3">
@@ -48,9 +59,11 @@ function Login() {
                     type="password"
                     minLength={5}
                     maxLength={8}
-                    placeholder="Enter password"
+                    placeholder={intl.formatMessage({ id: "enterPassword" })}
                   />
-                  <FormText>Forgot password</FormText>
+                  <FormText>
+                    <FormattedMessage id="forgotPassword" />
+                  </FormText>
                 </Form.Group>
                 <Button
                   style={{
@@ -64,7 +77,7 @@ function Login() {
                   type="submit"
                   variant="primary"
                 >
-                  Login
+                  <FormattedMessage id="login" />
                 </Button>
               </Form>
             </Container>
